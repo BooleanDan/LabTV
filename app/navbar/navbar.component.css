@@ -1,0 +1,12 @@
+.logo {
+    width: 60%;
+}
+
+.nav-item .nav-link {
+    color: white;
+    padding-top: 20px;
+}
+
+.navbar {
+    background: linear-gradient(to top, transparent 0%, black 100%);
+}

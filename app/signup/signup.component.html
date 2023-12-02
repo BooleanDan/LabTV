@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Registrati</h1>
+                    <h6>Riempi i seguenti campi</h6>
+                </div>
+
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text selpro">Noi non condivideremo la tua email con nessuno
+                        </div>
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">
+                            inserisci un email</span>
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('pattern', 'email')">
+                            non è un indirizzo email</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="password" type="password" class="form-control"
+                            id="exampleInputPassword1">
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
+                            inserisci una password</span>
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('pattern','password')">
+                            Password deve contenere un minimo di 8 caratteri, 1 lettera maiuscola e 1 carattere speciale
+                            ("@!?...")</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputNome" class="form-label">Nome</label>
+                        <input formControlName="nome" type="text" class="form-control" id="exampleInputNome">
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['nome'].dirty && signupForm.hasError('required','nome')">
+                            inserisci il tuo nome</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputCognome" class="form-label">Cognome</label>
+                        <input formControlName="cognome" type="text" class="form-control" id="exampleInputCognome">
+                        <span class="text-danger"
+                            *ngIf="signupForm.controls['cognome'].dirty && signupForm.hasError('required','cognome')">
+                            Inserisci il tuo cognome </span>
+
+
+                    </div>
+                    <label class="mb-3 selpro">Seleziona un immagine del profilo:</label><span class="text-danger"
+                        *ngIf="signupForm.controls['profileImage'].dirty && signupForm.hasError('required','profileImage')">
+                        seleziona un immagine del profilo</span>
+                    <div class="mb-3 contenitoreimg">
+
+
+                        <div>
+                            <label>
+                                <input type="radio" formControlName="profileImage" value="profilebasic.png">
+                                <img src="../../assets/profilebasic.png" alt="Immagine 1">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" formControlName="profileImage" value="micky2.png">
+                                <img src="../../assets/micky2.png" alt="Immagine 2">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" formControlName="profileImage" value="rick.png">
+                                <img src="../../assets/rick.png" alt="Immagine 3">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" formControlName="profileImage" value="homer.png">
+                                <img src="../../assets/homer.png" alt="Immagine 4">
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Registrati</button>
+                </form>
+                <a style="color:white; margin-top: 5px;" routerLink="/login">Gia registrato? Clicca qui per
+                    accedere</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

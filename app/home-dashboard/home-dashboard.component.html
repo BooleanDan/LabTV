@@ -1,0 +1,117 @@
+<app-navbar-dashboard></app-navbar-dashboard>
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000" *ngFor="let item of promoFilmResult;let i=index"
+                [ngClass]="{active:i===1}">
+                <img src="https://image.tmdb.org/t/p/original/{{item.backdrop_path}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="areaClick" [routerLink]="['/film',item.id]">
+                        <h2>{{item.original_title}} </h2>
+                        <p>{{item.overview}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="container mt-1 p-4" *ngIf="visibile">
+        <app-my-film [filmuser]="filmuser" (lastFilmRemoved)="aggiornaAccount($event)"></app-my-film>
+    </div>
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Di tendenza</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of trendMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Animazione</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of animationMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Commedia</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of comedyMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Fantascienza</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of fantascienzaMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Documentari</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of documentariMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 p-4">
+        <div class="row">
+            <h3 class="text-white">Film più visti</h3>
+            <div class="rowposter mt-3 p-2">
+                <ng-container *ngFor="let item of personMovieResult">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter"
+                        alt="..." [routerLink]="['/film',item.id]">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>

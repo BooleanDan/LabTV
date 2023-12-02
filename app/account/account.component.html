@@ -1,0 +1,32 @@
+<app-navbar-dashboard></app-navbar-dashboard>
+<div class="mt-5">
+
+    <div class="profilepic">
+        <img src="../../assets/{{user.profileImage}}" id="photo">
+
+
+    </div>
+    <div class="titolocard">
+        <h1 class="text-white">{{ user?.nome}}</h1>
+    </div>
+
+</div>
+
+<div class="container msgUser" *ngIf="visibile">
+    <h3 class="text-white text-center">Ciao {{ user?.nome}}! Grazie di esserti unito alla nostra community!</h3>
+    <h5 class="text-white text-center">Per noi è molto importante, vogliamo offrirti il miglior servizio di
+        streaming possibile</h5>
+    <h5 class="text-white text-center"> Un ringraziamento speciale da parte di tutto il nostro team! </h5>
+    <h4 class="text-white text-center"> Qui troverai la tua lista degli acquisti! Cosa aspetti? Inizia a
+        popolare la tua raccolta...</h4>
+</div>
+
+<div class="container mt-5 p-4" *ngIf="filmdiv">
+    <app-my-film [filmuser]="filmuser" (removeFilm)="rimuoviFilm($event)"
+        (lastFilmRemoved)="aggiornaAccount($event)"></app-my-film>
+
+</div>
+
+
+
+<app-footer></app-footer>

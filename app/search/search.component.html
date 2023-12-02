@@ -1,0 +1,104 @@
+<app-navbar-dashboard></app-navbar-dashboard>
+
+<div class="container mt-5 p-5">
+    <!--  <form [formGroup]="searchForm" (ngSubmit)="submitForm()" class="nascondi">
+        <div class="row">
+            <div class="mb-3 col-lg-10">
+
+                <input type="text" class="form-control" formControlName="movieName"
+                    placeholder="inserisci il titolo da cercare" autoFocus>
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-md">Cerca</button>
+            </div>
+        </div> 
+
+    </form>-->
+
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()" class="d-flex mt-3 nascondi" role="search">
+        <input class="form-control me-2" type="search" placeholder="Inserisci titolo" aria-label="Search"
+            formControlName="movieName" autoFocus>
+        <button class="btn btnMy">Search</button>
+    </form>
+
+
+
+
+    <div class="row mt-5" *ngIf="mostraDiv">
+        <h2 *ngIf="mostraDiv3">Ecco i risultati per "{{searchMovie}}"</h2>
+        <!--<h2>Ecco i risultati per "{{showSearchMovie ? searchMovie : searchForm.get('movieName')?.value }}"</h2>soluzione interessante-->
+        <h2 *ngIf="mostraDiv2">Ecco i risultati per "{{searchForm.get('movieName')?.value}}"</h2>
+        <div *ngFor="let item of searchResult">
+
+            <!-- <div class="row row1" [routerLink]="['/film',item.id]">
+                <div class="col-lg-3 mt-4 mb-4" *ngIf="item.poster_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="..."
+                        [routerLink]="['/film',item.id]">
+                </div>
+                <div class="col-lg-9 mt-4 mb-4">
+                    <h5>{{item.original_title}}</h5>
+                    <p>{{item.overview}}</p>
+
+                </div>
+            </div> -->
+
+            <div class="row row1" [routerLink]="['/film', item.id]">
+                <div class="col-lg-3 col-md-4 col-sm-12 mt-4 mb-4" *ngIf="item.poster_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="...">
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-12 mt-4 mb-4">
+                    <h5>{{item.original_title}}</h5>
+                    <p>{{item.overview}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+
+    <div *ngIf="mostraDivErr">
+        <h2>Non abbiamo trovato corrispondenze per "{{searchMovie}}"</h2>
+    </div>
+
+    <h1>Esplora serie,Film e tanto altro</h1>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div style="background-color: red;" class="sezione gradiente-viola">
+                <h2>Film</h2>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!-- Contenuto del secondo div -->
+            <div style="background-color: red;" class="sezione gradient-verde">
+                <h2>Film e Serie </h2>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!-- Contenuto del terzo div -->
+            <div style="background-color: red;" class="sezione gradient-giallo-rosso">
+                <h2>Per tutta la famiglia </h2>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!-- Contenuto del quarto div -->
+            <div style="background-color: red;" class="sezione gradient-blu">
+                <h2>Serie drammatiche </h2>
+            </div>
+        </div>
+        <!-- Aggiungi altri div simili se necessario -->
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <!-- Contenuto del quarto div -->
+            <div style="background-color: red;" class="sezione gradient-verde-acqua">
+                <h2>Commedie </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

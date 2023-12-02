@@ -1,0 +1,151 @@
+<!-- <nav class="navbar navbar-expand-lg fixed-top" [ngStyle]="navBackground">
+    <div class="container-fluid">
+        <a class="navbar-brand" (click)="tornaHome()"><img src="/assets/logoImage.png" id="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="cerca()">
+                        <div class="profilepic">
+                            <img src="../../assets/search6.png" class="photo">
+                        </div>
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" (click)="myAccount()">
+                        <div class="profilepic">
+                            <img src="../../assets/{{user.profileImage}}" class="photo">
+
+
+                        </div>
+                    </a>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" [ngStyle]="navBackground">
+    <div class="container-fluid">
+        <a class="navbar-brand" (click)="tornaHome()"><img src="/assets/logoImage.png" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                    <!-- <img src="/assets/logoImage.png" class="logo"> -->
+
+
+
+                    <div class="nav-item" style="display: flex;">
+                        <a class="nav-link  profilepic2" role="button" aria-expanded="false">
+                            <div class="profilepic2">
+                                <img src="../../assets/{{user.profileImage}}" class="photo2" (click)="myAccount()">
+
+
+                            </div>
+
+                        </a>
+                        <button class="bottone" (click)="logout()">Esci</button>
+
+                    </div>
+
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page">
+                            <form [formGroup]="searchForm" (ngSubmit)="cerca()" class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Inserisci titolo"
+                                    aria-label="Search" formControlName="movieName">
+                                <button class="btn btnMy" type="submit">Search</button>
+                            </form>
+                            <!-- <app-search-bar></app-search-bar> -->
+                        </a>
+
+                    </li>
+
+                    <!--  <li class="nav-item nascondiMax">
+                        <a class="nav-link" aria-current="page">
+                            <form class="d-flex mt-3" role="search2" (click)="cerca()">
+                                <input class="form-control me-2" type="search" placeholder="Inserisci titolo"
+                                    aria-label="Search" autoFocus>
+                                <button class="btn btnMy">Search</button>
+                            </form>
+                        </a>
+
+                    </li> -->
+
+                    <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" (click)="cerca()">
+                            <div class="profilepic">
+                                <img src="../../assets/search6.png" class="photo">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="myAccount()">
+                            <div class="profilepic">
+                                <img src="../../assets/{{user.profileImage}}" class="photo">
+
+
+                            </div>
+                        </a>
+
+                    </li> -->
+                    <li class="nav-item dropdown nascondi">
+                        <a class="nav-link dropdown-toggle profilepic2" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="profilepic2">
+                                <img src="../../assets/{{user.profileImage}}" class="photo2">
+
+
+                            </div>
+
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-left">
+                            <li><a class="dropdown-item" (click)="myAccount()">Il mio account</a></li>
+                            <li><a class="dropdown-item" (click)="logout()">Esci</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>

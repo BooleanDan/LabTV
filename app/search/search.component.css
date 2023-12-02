@@ -1,0 +1,125 @@
+button {
+    background-color: white;
+}
+
+button:hover {
+    background-color: white;
+
+}
+
+h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+
+img {
+    width: 80%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+h5 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.row1 {
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.row1:hover {
+    transform: scale(110%);
+}
+
+.sezione {
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    max-width: 280px;
+    cursor: pointer;
+
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sezione h2 {
+    padding-top: 25%;
+
+    margin-left: 10%;
+    color: white;
+
+}
+
+
+.sezione:hover {
+    border: 2px solid white;
+    transform: scale(110%);
+}
+
+/* Definizione del gradiente */
+.gradiente-viola {
+    /* Utilizza gradient per creare un gradiente lineare */
+    background: linear-gradient(to bottom, #8A2BE2, #8d5da1);
+    /* Puoi personalizzare i colori e la direzione del gradiente come preferisci */
+    /* #8A2BE2 e #9400D3 sono i colori viola nel nostro esempio */
+}
+
+/* Gradients Style 1 */
+.gradient-verde {
+    background: linear-gradient(to bottom, #4CAF50, #73a676);
+}
+
+/* Gradients Style 2 */
+.gradient-giallo-rosso {
+    background: linear-gradient(to bottom, #dbc75a, #b85858);
+}
+
+/* Gradiente Blu */
+.gradient-blu {
+    background: linear-gradient(to bottom, #182938, #5f96ca);
+}
+
+/* Gradiente Verde Acqua */
+.gradient-verde-acqua {
+    background: linear-gradient(to bottom, #7fc3da, #417e7f);
+}
+
+@media screen and (min-width: 990px) {
+    .nascondi {
+        display: none !important;
+    }
+
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+    .sezione {
+        margin: 10px auto;
+
+    }
+
+
+
+
+
+    img {
+        margin-left: 30px
+    }
+}

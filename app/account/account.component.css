@@ -1,0 +1,119 @@
+img {
+    height: 200px;
+}
+
+.profilepic {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+#photo {
+    height: 100%;
+    width: 100%;
+}
+
+.titolocard {
+    height: 40px;
+
+    position: relative;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    line-height: 30px;
+    font-size: 15px;
+
+    margin-top: 10px;
+}
+
+.logout {
+    position: absolute;
+    top: 12%;
+    left: 90%;
+    transform: translateX(-50%);
+    color: white;
+
+}
+
+
+
+
+/* lista film*/
+
+.rowposter {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    align-items: flex-start;
+}
+
+.rowimg {
+    height: 100%;
+    object-fit: contain;
+    width: 150px;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.rowimg:hover {
+    transform: scale(1.06);
+
+}
+
+.largeposter img {
+    max-height: 200px;
+
+}
+
+.rowposter::-webkit-scrollbar {
+    display: none;
+}
+
+.listaGenere {
+    margin-left: -30px;
+    margin-top: -2px;
+}
+
+.listaGenere li {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.listaGenere li:first-child {
+    color: white;
+}
+
+.listaGenere li {
+    color: rgba(255, 255, 255, 0.746);
+}
+
+
+
+.bottone {
+
+    width: 150px;
+    margin-left: 0;
+
+}
+
+.msgUser {
+    margin-top: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+}

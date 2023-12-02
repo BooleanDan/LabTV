@@ -1,0 +1,5 @@
+<form [formGroup]="searchForm" (ngSubmit)="cerca()" class="d-flex mt-3" role="search">
+    <input class="form-control me-2" type="search" placeholder="Inserisci titolo" aria-label="Search"
+        formControlName="movieName">
+    <button class="btn btnMy" type="submit">Search</button>
+</form>

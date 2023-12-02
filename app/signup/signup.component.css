@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-bottom: 3%;
+}
+
+
+.card {
+    margin-top: 30px;
+
+    border: none;
+    width: 500px;
+    padding: 40px;
+
+
+    background-color: rgba(134, 134, 134, 0.208);
+    border: 1px solid white;
+}
+
+img {
+    height: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 10px;
+
+
+}
+
+.contenitoreimg {
+    display: flex;
+
+}
+
+input[type=radio] {
+    display: none;
+
+
+}
+
+input[type=radio]+img {
+    opacity: 0.7;
+    cursor: pointer;
+
+
+}
+
+
+
+
+input[type=radio]:checked+img {
+    outline: 4px solid rgb(255, 255, 255);
+    opacity: 1;
+
+}
+
+
+
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: black;
+    border: none;
+    width: 150px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.33338;
+    font-weight: 600;
+    letter-spacing: 0;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    align-self: flex-start;
+
+}
+
+h1 {
+    color: white;
+}
+
+h6,
+.form-label,
+.selpro {
+    color: rgba(255, 255, 255, 0.656);
+}

@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* Centra orizzontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    margin-top: 12%;
+}
+
+.card {
+
+    border: none;
+    width: 500px;
+    padding: 40px;
+
+
+
+
+    background-color: rgba(134, 134, 134, 0.208);
+    border: 1px solid white;
+
+
+
+
+}
+
+
+
+h1,
+.link {
+    color: white;
+}
+
+h6,
+.form-label {
+    color: rgba(255, 255, 255, 0.656);
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: black;
+    border: none;
+    width: 150px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.33338;
+    font-weight: 600;
+    letter-spacing: 0;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    align-self: flex-start;
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin-top: 20%;
+
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+
+
+
+
+/* .footer {
+    margin-top: 700px;
+    bottom: 0;
+    background-color: rgba(134, 134, 134, 0.208);
+    height: 100%;
+    padding-bottom: 10px;
+} */
+
+
+/* @media screen and (min-width: 1200px) {
+    .footer {
+        margin-top: 800px;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .footer {
+        margin-top: 1000px;
+    }
+} */

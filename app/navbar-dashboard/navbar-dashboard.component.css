@@ -1,0 +1,96 @@
+.logo {
+    width: 60%;
+    cursor: pointer;
+}
+
+.nav-item .nav-link {
+    color: white;
+}
+
+li a {
+    cursor: pointer;
+}
+
+.profilepic {
+    height: 32px;
+    width: 35px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.photo {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.photo2 {
+    height: 100%;
+    width: 100%;
+
+}
+
+.profilepic2 {
+    height: 70px;
+    width: 70px;
+    margin-right: 40px;
+    overflow: hidden;
+
+
+
+}
+
+.dropdown-menu {
+    margin-left: -40px;
+    left: auto;
+    /* added */
+}
+
+.btnMy {
+
+    border-radius: 6px;
+    border: none;
+    padding: 0 16px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+    color: black;
+    font-size: 15px;
+    line-height: 1.33338;
+    font-weight: 600;
+    letter-spacing: 0;
+    transition-duration: 250ms;
+
+}
+
+.btnMy:hover {
+    background-color: rgba(255, 255, 255, 0.688);
+}
+
+.bottone {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.offcanvas-header {
+
+    background: linear-gradient(to bottom, rgb(22, 22, 22), rgb(28, 27, 27));
+
+}
+
+
+@media screen and (max-width: 990px) {
+    .nascondi {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 990px) {
+    .nascondiMax {
+        display: none;
+    }
+}

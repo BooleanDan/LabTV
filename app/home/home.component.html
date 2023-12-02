@@ -1,0 +1,148 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="4000" *ngFor="let item of promoFilmResult;let i=index"
+                [ngClass]="{active:i===1}">
+                <img src="https://image.tmdb.org/t/p/original/{{item.backdrop_path}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-end">{{item.original_title}}</h2>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="descrizione">
+        <div class="row">
+            <h1 class="text-center">Questo è LABTV</h1>
+            <h3 class="text-center">Film, serie TV e tanto altro, senza limiti</h3>
+            <h5 class="text-center">Vuoi guardare LABTV? Cosa aspetti...</h5>
+            <div class="contenitoreBtn"><a routerLink="login"><button class="bottone">Accedi</button></a></div>
+
+            <div class="contenitoreBtn"><a routerLink="signup"><button class="bottone">Registrati</button></a></div>
+        </div>
+
+
+        <div class="dispositivi">
+            <div class="row-2">
+                <h1 class="text-center mt">Guarda qui e sul grande schermo.</h1>
+                <h4 class="text-center">Puoi trovare LabTV sull'app TV,disponibile su smartphone, smart Tv, web e altro
+                    ancora </h4>
+                <ul class="disp nascondi">
+                    <li><img src="../../assets/iphone.png"></li>
+                    <li><img src="../../assets/ipad.png"></li>
+                    <li><img src="../../assets/pc.png"></li>
+                </ul>
+
+
+            </div>
+
+            <div class="contenitoreAccordion">
+                <a name="help">
+                    <h1>Una Risposta per ogni domanda</h1>
+                </a>
+                <div class="contenitorevero">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    In cosa consiste LabTV?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">LabTV è un servizio di streaming. Comprende i programmi e i
+                                    film esclusivi Original con i migliori talenti del settore e nuove premiere ogni
+                                    mese. Naviga tra tutti i contenuti disponibili su LabTV all'interno dell'app
+                                    LabTV nella sezione "LabTV" o sulla pagina tv.labtv.com</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Quanto costa LabTV?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Il prezzo potrebbe variare in base all'offerta che scegli.
+                                    Se acquisti un dispositivo Apple, LabTV è incluso gratuitamente per 3 mesi.
+                                    Dopo una prova gratuita di sette giorni, un abbonamento mensile costa solo 6,99 €
+                                    al mese. LabTV è incluso in LabOne, che racchiude vari servizi
+                                    in un unico abbonamento mensile. Il piano Studenti Lab Music include un
+                                    abbonamento gratuito a LabTV.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapse">
+                                    Posso ottenere LabTV gratuitamente?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Ci sono diversi modi per provare LabTV gratuitamente. Per
+                                    esempio, prova gratis 7 giorni di LabTV attivando una prova gratuita nell'app su
+                                    iPhone, iPad, Apple TV 4K o HD, o su qualsiasi dispositivo di streaming. Se hai
+                                    acquistato di recente un dispositivo che include una prova gratuita di 12, 6 o
+                                    3 mesi (o altre durate) di LabTV, questa offerta apparirà automaticamente nell'app
+                                    LabTV una volta esequito l'accesso con il tuo account associato al tuo
+                                    recente acquisto.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    Dove posso guardare LabTV?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">LabTV è un abbonamento di streaming esclusivo
+                                    disponibile sull'app store del tuo dispositivo. Puoi trovare l'app su molti dei tuoi
+                                    dispositivi Apple preferiti. Inoltre, trovi l'app su diverse smart TV, dispositivi
+                                    di streaming, console di gioco e
+                                    alcuni decoder.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    Posso condividere LabTV con la mia famiglia?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Sì. LabTV ti consente di condividere il tuo abbonamento
+                                    con un massimo di cinque membri della famiglia.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <app-footer></app-footer>

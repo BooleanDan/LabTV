@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center mb-3">
+                    <h1>Login</h1>
+                    <h6>Inserisci le credenziali del tuo account </h6>
+                </div>
+
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                        <span class="text-danger"
+                            *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">
+                            inserisci un email</span>
+                        <span class="text-danger"
+                            *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('pattern', 'email')">
+                            non è un indirizzo email</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="password" type="password" class="form-control"
+                            id="exampleInputPassword1">
+                        <span class="text-danger"
+                            *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+                            psw Id is required</span>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+                </form>
+                <a class="link" routerLink="/signup">Nuovo utente? Clicca qui per registrarti</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

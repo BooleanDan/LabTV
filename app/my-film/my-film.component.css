@@ -1,0 +1,79 @@
+h2,
+p {
+    color: white;
+}
+
+.rowposter {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.image-container {
+    height: 300px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 14px;
+    position: relative;
+
+}
+
+.rowimg {
+    transition: 0.3s;
+}
+
+.rowimg:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+}
+
+.largeposter {
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar {
+    display: none;
+}
+
+.areaClick {
+    cursor: pointer;
+}
+
+.btn {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    left: 180px;
+    top: -5%;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+
+    visibility: hidden;
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+
+
+
+}
+
+.image-container {
+    max-width: 200px;
+
+}
+
+.image-container:hover .btn {
+    visibility: visible;
+    transform: scale(1.06);
+
+}
+
+.btn:hover {
+    color: rgba(240, 58, 58, 0.863);
+}

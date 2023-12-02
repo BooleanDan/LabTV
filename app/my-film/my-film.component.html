@@ -1,0 +1,16 @@
+<div class="row mt-5">
+    <h3 class="text-white">I miei acquisti</h3>
+    <div class="rowposter mt-3 p-2">
+        <ng-container *ngFor="let item of filmuser">
+            <div class="image-container">
+                <img src="https://image.tmdb.org/t/p/original/{{item.copertina}} " class="rowimg largeposter copertina"
+                    [routerLink]="['/film',item.idfilm]">
+
+
+                <button class="mt-2 btn btn-primary" (click)="rimuovi(item.id)">&times;</button>
+            </div>
+
+        </ng-container>
+
+    </div>
+</div>
