@@ -81,6 +81,8 @@ export class FilmDetailComponent {
     this.idFilm = this.route.snapshot.params['id'];
 
 
+    /* Inizialmente ho allegato il token alla rotta alla fine l'ho rimosso perchè il token lo prende dal local storage per qualsiasi cosa
+    
     if (localStorage.getItem('token')) {
       // Aggiungi il token come parametro nella rotta attuale
       this.router.navigate(['film', this.idFilm], { queryParams: { token } });
@@ -88,7 +90,7 @@ export class FilmDetailComponent {
     }
     else if (!localStorage.getItem('token')) {
       this.router.navigate(['/login']);
-    }
+    } */
 
 
 
