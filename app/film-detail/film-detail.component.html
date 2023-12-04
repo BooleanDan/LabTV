@@ -18,7 +18,8 @@
                 <div>
                     <button class="bottone primo" *ngIf="mostraPulsante" (click)="apriModal()">Trailer</button>
                     <button class="bottone solo" *ngIf="pulsanteAcquista" (click)="acquista()">Acquista</button>
-                    <button class="bottone solo" *ngIf="pulsantePlay" (click)="playFilm()">Riproduci</button>
+                    <button class="bottone solo" *ngIf="pulsantePlay" (click)="playFilm()"><i class="fa-solid fa-play"
+                            style="color: #000000; margin-right: 10px;"></i>Riproduci</button>
                 </div>
                 <p class="mt-2">{{getMovieDetailResult.overview}}</p>
 

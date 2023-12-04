@@ -28,7 +28,7 @@
                             id="exampleInputPassword1">
                         <span class="text-danger"
                             *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
-                            psw Id is required</span>
+                            La password è richiesta</span>
 
                     </div>
                     <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
