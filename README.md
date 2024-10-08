@@ -123,10 +123,7 @@ Il server permette la registrazione, l'autenticazione e la gestione delle sessio
 ## Struttura del Progetto
 - `/routes`: Contiene le rotte del server (login, registrazione, ecc.).
 - `/models`: Contiene i modelli per il database (es. utente).
-- `/middleware`: Contiene il middleware per la verifica del token JWT.
 
-## Contributi
-Se desideri contribuire al progetto, apri una **pull request** o segnala eventuali problemi attraverso la sezione **issues**.
 
 ## Licenza
 Questo progetto è distribuito sotto la licenza MIT. Per maggiori informazioni, consulta il file [LICENSE](LICENSE).
