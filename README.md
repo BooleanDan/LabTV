@@ -125,10 +125,6 @@ Il server permette la registrazione, l'autenticazione e la gestione delle sessio
 - `/models`: Contiene i modelli per il database (es. utente).
 
 
-## Licenza
-Questo progetto è distribuito sotto la licenza MIT. Per maggiori informazioni, consulta il file [LICENSE](LICENSE).
-
-
 ## Utilizzo
 - Navigare nel sito per visualizzare i film tramite l'API di TMDB.
 - Effettuare il login per simulare l'acquisto di un film.
