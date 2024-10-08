@@ -54,7 +54,104 @@ Per eseguire il progetto, è necessario avere installato:
    ```
    Il sito sarà disponibile all'indirizzo `http://localhost:4200`.
 
-5. Configurare il REST API Web Server per la gestione del login seguendo le istruzioni nel file `server/README.md`.
+5. Configurare il REST API Web Server per la gestione del login
+   
+# Server REST API - Gestione Utenza e Login
+
+## Descrizione
+Questo file descrive il funzionamento del server REST API utilizzato per la gestione dell'utenza e del login nel progetto di streaming. Il server permette la registrazione, l'autenticazione e la gestione delle sessioni degli utenti.
+
+### Funzionalità Implementate:
+- **Registrazione**: Gli utenti possono registrarsi al sistema.
+- **Login**: Gli utenti registrati possono effettuare il login e ricevere un token di autenticazione.
+- **Verifica Autenticazione**: Il token di autenticazione è verificato per accedere alle risorse protette del sito.
+- **Logout**: Possibilità di terminare la sessione utente.
+
+## Requisiti
+Per eseguire il server REST API è necessario avere:
+- Node.js (>= v12)
+- Express.js
+- JWT (JSON Web Token) per la gestione dell'autenticazione
+- Un database per memorizzare le informazioni degli utenti (es. MongoDB, MySQL, etc.)
+
+## Installazione
+1. Clonare il repository del server REST API:
+   ```bash
+   git clone https://github.com/username/server-repository.git
+   ```
+2. Entrare nella directory del server:
+   ```bash
+   cd server-repository
+   ```
+3. Installare le dipendenze necessarie:
+   ```bash
+   npm install
+   ```
+
+## Configurazione
+1. Creare un file `.env` nella root del progetto e definire le seguenti variabili d'ambiente:
+   ```bash
+   PORT=3000
+   JWT_SECRET=your-secret-key
+   DB_CONNECTION_STRING=your-database-url
+   ```
+2. Avviare il server:
+   ```bash
+   npm start
+   ```
+   Il server sarà eseguito all'indirizzo `http://localhost:3000`.
+
+## Endpoint Disponibili
+- **POST /api/register**: Registra un nuovo utente.
+  - Richiesta:
+    ```json
+    {
+      "username": "string",
+      "password": "string"
+    }
+    ```
+  - Risposta: 
+    ```json
+    {
+      "message": "User registered successfully"
+    }
+    ```
+
+- **POST /api/login**: Esegue il login dell'utente e restituisce un token JWT.
+  - Richiesta:
+    ```json
+    {
+      "username": "string",
+      "password": "string"
+    }
+    ```
+  - Risposta:
+    ```json
+    {
+      "token": "jwt-token-string"
+    }
+    ```
+
+- **GET /api/protected**: Esempio di risorsa protetta, richiede un token JWT per essere accessibile.
+  - Richiesta: Token JWT nell'header Authorization.
+  - Risposta:
+    ```json
+    {
+      "message": "Access to protected resource"
+    }
+    ```
+
+## Struttura del Progetto
+- `/routes`: Contiene le rotte del server (login, registrazione, ecc.).
+- `/models`: Contiene i modelli per il database (es. utente).
+- `/middleware`: Contiene il middleware per la verifica del token JWT.
+
+## Contributi
+Se desideri contribuire al progetto, apri una **pull request** o segnala eventuali problemi attraverso la sezione **issues**.
+
+## Licenza
+Questo progetto è distribuito sotto la licenza MIT. Per maggiori informazioni, consulta il file [LICENSE](LICENSE).
+
 
 ## Utilizzo
 - Navigare nel sito per visualizzare i film tramite l'API di TMDB.
