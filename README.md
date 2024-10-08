@@ -1,5 +1,4 @@
 
-<img width="500" alt="Screenshot 2023-12-05 alle 12 24 49" src="https://github.com/BooleanDan/LabTV/assets/144498896/daa1161a-8741-49be-80e6-8bb7f22fffef">
 
 # Progetto di Streaming - Seconda Prova Pratica LABFORTRAINING
 
@@ -138,12 +137,9 @@ Questo progetto è distribuito sotto la licenza MIT. Per maggiori informazioni, 
 - Effettuare il login per simulare l'acquisto di un film.
 - Aggiungere film al carrello e procedere con la simulazione dell'acquisto.
 
-## Struttura del Progetto
-- `/src/app`: Contiene i components, servizi e moduli principali.
-- `/server`: Contiene il codice per il server REST API per la gestione dell'autenticazione.
+<img width="500" alt="Screenshot 2023-12-05 alle 12 24 49" src="https://github.com/BooleanDan/LabTV/assets/144498896/daa1161a-8741-49be-80e6-8bb7f22fffef">
 
-## Contributi
-Se desideri contribuire al progetto, apri una **pull request** o segnala eventuali problemi attraverso la sezione **issues**.
+
 
 ## Licenza
 Questo progetto è distribuito sotto la licenza MIT. Per maggiori informazioni, consulta il file [LICENSE](LICENSE).
