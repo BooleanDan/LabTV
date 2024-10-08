@@ -58,8 +58,8 @@ Per eseguire il progetto, è necessario avere installato:
    
 # Server REST API - Gestione Utenza e Login
 
-## Descrizione
-Questo file descrive il funzionamento del server REST API utilizzato per la gestione dell'utenza e del login nel progetto di streaming. Il server permette la registrazione, l'autenticazione e la gestione delle sessioni degli utenti.
+
+Il server permette la registrazione, l'autenticazione e la gestione delle sessioni degli utenti.
 
 ### Funzionalità Implementate:
 - **Registrazione**: Gli utenti possono registrarsi al sistema.
@@ -67,26 +67,6 @@ Questo file descrive il funzionamento del server REST API utilizzato per la gest
 - **Verifica Autenticazione**: Il token di autenticazione è verificato per accedere alle risorse protette del sito.
 - **Logout**: Possibilità di terminare la sessione utente.
 
-## Requisiti
-Per eseguire il server REST API è necessario avere:
-- Node.js (>= v12)
-- Express.js
-- JWT (JSON Web Token) per la gestione dell'autenticazione
-- Un database per memorizzare le informazioni degli utenti (es. MongoDB, MySQL, etc.)
-
-## Installazione
-1. Clonare il repository del server REST API:
-   ```bash
-   git clone https://github.com/username/server-repository.git
-   ```
-2. Entrare nella directory del server:
-   ```bash
-   cd server-repository
-   ```
-3. Installare le dipendenze necessarie:
-   ```bash
-   npm install
-   ```
 
 ## Configurazione
 1. Creare un file `.env` nella root del progetto e definire le seguenti variabili d'ambiente:
